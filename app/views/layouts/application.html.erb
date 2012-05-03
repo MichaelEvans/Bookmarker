@@ -11,7 +11,11 @@
     <div id="header">
         <div id="title_bar">
           Bookmarker
-          <button id="login_button">Log in</button>
+          <% if user_signed_in? %>
+            <button id="login_button">Log out</button>
+          <% else %>
+            <button id="login_button">Log in</button>
+          <% end %>
         </div>
       </div>
     <div id="container">

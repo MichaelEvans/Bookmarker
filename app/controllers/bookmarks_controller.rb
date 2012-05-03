@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @bookmarks = Bookmark.all
+    @bookmarks = current_user.bookmarks
   end
 
   def show
@@ -14,7 +14,7 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    @bookmark = Bookmark.new(params[:bookmark])
+    @bookmark = current_user.bookmark.build(params[:bookmark])
     if @bookmark.save
       redirect_to @bookmark, :notice => "Successfully created bookmark."
     else

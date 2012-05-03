@@ -22,14 +22,15 @@ group :assets do
   # gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass'
+  gem 'compass-rails'
+  gem 'sassy-buttons'
   #gem 'twitter-bootstrap-rails'
 
 end
 
 gem 'jquery-rails'
-gem 'compass'
-gem 'compass-rails'
-gem 'sassy-buttons'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
