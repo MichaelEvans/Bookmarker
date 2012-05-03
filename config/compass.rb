@@ -1,8 +1,4 @@
-# Require any additional compass plugins here.
 project_type = :rails
-
-if Rails.env.production?
-  css_dir = "tmp/stylesheets/compiled"
-else
-  css_dir = "public/stylesheets/compiled"
-end
+http_path    = '/'
+css_dir      = 'tmp/stylesheets'
+sass_dir     = 'app/views/stylesheets'
