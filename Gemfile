@@ -23,12 +23,13 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   #gem 'twitter-bootstrap-rails'
-  gem 'sassy-buttons'
+
 end
 
 gem 'jquery-rails'
 gem 'compass'
 gem 'compass-rails'
+gem 'sassy-buttons'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
