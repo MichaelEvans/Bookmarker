@@ -40,9 +40,15 @@ input{
 	margin: 30px auto;
 	margin-top: 100px;
 	width: 800px;
-	padding: 10px;
+	padding: 10px 20px 25px 20px;
 	@include border-radius(15px);
 	background: white;
+	label{
+		font-size: 12px;
+	}
+}
+#signup_form{
+	margin-left: 30px;
 }
 #login_button{
 	@include sassy-button("simple", 3px, 12px, $action-color, $action-color-darker);
