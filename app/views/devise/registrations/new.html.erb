@@ -1,0 +1,25 @@
+<h2>Sign up</h2>
+<h1>Bookmarker: An Online Bookmarking Organizer</h1>
+
+<ul>
+	<li>Search and organize bookmarks easily</li>
+	<li>Access bookmarks from any browser</li>
+<ul>
+<button id="test"> Sign me up! </button>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "links" %>

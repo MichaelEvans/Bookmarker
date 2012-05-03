@@ -1,0 +1,36 @@
+@import "compass";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/reset";
+@import "sassy-buttons";
+
+$action-color: #67a54b;
+$action-color-darker: darken( $action-color, 10% );
+body{
+	font-family: "Helvetica Neue", sans-serif;
+	margin: 0px;
+	@include background(inline-image("argyle.png"));
+}
+#header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom: 4px solid white;
+	padding: 20px;
+	@include background(linear-gradient($action-color 22%, $action-color-darker));
+}
+#container{
+	margin: 30px auto;
+	margin-top: 100px;
+	width: 800px;
+	padding: 10px;
+	@include border-radius(15px);
+	background: white;
+}
+#test{
+	//@include sassy-button("simple", 3px, 12px, #EE5E3D, #CC3512);
+	@include sassy-button("simple", 3px, 12px, #4D8CCD, #3372B4);
+}
+#login_button{
+	@include sassy-button("simple", 3px, 12px, $action-color, $action-color-darker);
+}

@@ -1,0 +1,24 @@
+<% title "Bookmark" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bookmark.title %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @bookmark.description %>
+</p>
+<p>
+  <strong>Url:</strong>
+  <%= @bookmark.url %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @bookmark.user_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_bookmark_path(@bookmark) %> |
+  <%= link_to "Destroy", @bookmark, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", bookmarks_path %>
+</p>
