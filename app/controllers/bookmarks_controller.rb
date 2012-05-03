@@ -6,7 +6,8 @@ class BookmarksController < ApplicationController
   end
 
   def show
-    @bookmark = Bookmark.find(params[:id])
+    @bookmark = current_user.bookmarks.find_by_id(params[:id])
+    redirect_to root_path if @bookmark.nil?
   end
 
   def new
@@ -14,7 +15,7 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    @bookmark = current_user.bookmark.build(params[:bookmark])
+    @bookmark = current_user.bookmarks.build(params[:bookmark])
     if @bookmark.save
       redirect_to @bookmark, :notice => "Successfully created bookmark."
     else
@@ -36,7 +37,9 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    @bookmark = Bookmark.find(params[:id])
+    @bookmark = current_user.bookmarks.find_by_id(params[:id])
+    #@bookmark = Bookmark.find(params[:id])
+    redirect_to root_path if @bookmark.nil?
     @bookmark.destroy
     redirect_to bookmarks_url, :notice => "Successfully destroyed bookmark."
   end
