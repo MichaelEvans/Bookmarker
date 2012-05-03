@@ -23,7 +23,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'compass'
-  gem 'haml' # for SASS
   gem 'compass-rails'
   gem 'sassy-buttons'
   #gem 'twitter-bootstrap-rails'
