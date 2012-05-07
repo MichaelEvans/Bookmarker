@@ -4,7 +4,8 @@ Bookmarker::Application.routes.draw do
   resources :bookmarks
 
   devise_for :users do
-    get "/", :to => "devise/registrations#new"
+    #get "/", :to => "devise/registrations#new"
+    get "/", :to => "bookmarks#index"
   end
 
   root :to => "devise/registrations#new"

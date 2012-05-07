@@ -12,7 +12,8 @@
         <div id="title_bar">
           Bookmarker
           <% if user_signed_in? %>
-            <button id="login_button">Log out</button>
+            <!--<button id="login_button">Log out</button>-->
+            <%= link_to('Log out', destroy_user_session_path, :method => :delete, :id => "login_button") %>
           <% else %>
             <button id="login_button">Log in</button>
           <% end %>

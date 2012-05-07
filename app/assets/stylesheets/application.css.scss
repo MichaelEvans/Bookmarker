@@ -31,9 +31,11 @@ input{
 	#title_bar{
 		margin-left: 132px;
 		margin-right: 152px;
-		button{
-			float: right;
-		}
+		// a {
+		// 	float: right;
+		// 	@include sassy-button("simple", 3px, 12px, $action-color, $action-color-darker);
+		// 	text-decoration: none;
+		// }
 	}
 }
 #container{
@@ -51,7 +53,9 @@ input{
 	margin-left: 30px;
 }
 #login_button{
+	float: right;
 	@include sassy-button("simple", 3px, 12px, $action-color, $action-color-darker);
+	text-decoration: none;
 }
 .confirm_button{
 	@include sassy-button("simple", 3px, 12px, #4D8CCD, #3372B4);
