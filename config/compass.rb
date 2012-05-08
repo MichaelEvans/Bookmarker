@@ -15,3 +15,4 @@ http_path = "/"
 # line_comments = false
 
 #preferred_syntax = :sass
+require 'ninesixty'

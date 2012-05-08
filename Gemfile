@@ -28,6 +28,7 @@ group :assets do
   gem 'compass'
   gem 'compass-rails'
   gem 'sassy-buttons'
+  gem 'compass-960-plugin'
   #gem 'twitter-bootstrap-rails'
 
 end

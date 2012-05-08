@@ -1,6 +1,19 @@
 <% title "Bookmarks" %>
 
-<table>
+<div class="bookmarks">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="bookmark">
+      <h2><%= link_to bookmark.title, url_with_protocol(bookmark.url) %></h2>
+      <div class="bookmark_controls">
+
+        <% link_to "Edit", edit_bookmark_path(bookmark) %> 
+        <%= link_to "Delete", bookmark, method: "delete", confirm: "Are you sure?", :class => "delete_button" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<!-- <table>
   <tr>
     <th>Title</th>
     <th>Description</th>
@@ -18,6 +31,6 @@
       <td><%= link_to "Destroy", bookmark, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
-</table>
+</table> -->
 
-<p><%= link_to "New Bookmark", new_bookmark_path %></p>
+<p><%= link_to "New Bookmark", new_bookmark_path, :class => "new_bookmark" %></p>
