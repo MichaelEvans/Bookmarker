@@ -5,7 +5,7 @@
     <div class="bookmark">
       <h2><%= link_to bookmark.title, url_with_protocol(bookmark.url) %></h2>
       <div class="bookmark_controls">
-
+        Added <%= distance_of_time_in_words_to_now(bookmark.created_at) %> ago
         <% link_to "Edit", edit_bookmark_path(bookmark) %> 
         <%= link_to "Delete", bookmark, method: "delete", confirm: "Are you sure?", :class => "delete_button" %>
       </div>

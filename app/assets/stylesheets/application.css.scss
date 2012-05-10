@@ -64,3 +64,9 @@ input{
 .confirm_button{
 	@include sassy-button("simple", 3px, 12px, #4D8CCD, #3372B4);
 }
+
+#new_bookmark{
+	//@include grid(8,5, 10px);
+	//width: 500px;
+	
+}
