@@ -1,0 +1,9 @@
+<div class="bookmark">
+	<h2><%= link_to bookmark.title, url_with_protocol(bookmark.url) %></h2>
+	
+	<div class="bookmark_controls">
+		<span class="date"><%= "#{bookmark.created_at.month}/#{bookmark.created_at.day}" %></span>
+		<%= link_to "Edit", edit_bookmark_path(bookmark), :class => "edit_button" %> 
+		<%= link_to "Delete", bookmark, method: "delete", confirm: "Are you sure?", :class => "delete_button" %>
+		</div>
+</div>

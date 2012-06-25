@@ -9,7 +9,8 @@
 
 .bookmark{
 	border: solid 1px #AAA;
-	margin: 20px 0;
+	margin: 10px 0;
+
 	padding: 7px 12px;
 	@include border-radius(6px);
 	@include transition(all, 500ms, ease-in-out);
@@ -18,7 +19,8 @@
     	margin: 0;
     	a { text-decoration: none; }
   	}
-  	@include grid(1,5, 10px);
+  	//@include grid(1,5, 10px);
+  	@include grid(8);
 }
 
 .new_bookmark {
@@ -28,15 +30,24 @@
   float: right;
   //@include grid(2);
 }
-
+.bookmark_controls{
+	float: right;
+}
 .delete_button{
 	text-decoration: none;
 	@include sassy-button("flat", 3px, 10px, #EC4B25, #B52F10);
 	padding-left: 8px;
 	padding-right: 8px;
-	float: right;
 }
-
+.edit_button{
+	text-decoration: none;
+	@include sassy-button("flat", 3px, 10px, #949494, darken(#949494, 10%));
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.date{
+	font-size: 12px;
+}
 .bookmark_form{
 	width: 325px;
 	margin: 0 auto;
